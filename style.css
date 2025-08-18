@@ -1,0 +1,170 @@
+
+html, body {
+        height: 100%;              /* make body full height */
+        margin: 0;  
+        display: flex;
+        justify-content: center; /* horizontal */
+        align-items: center;                    /* remove default margin */
+    }
+body {
+    background-image: url("../Images/New_York.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#clock {
+        width: 700px;
+        height: 450px;
+        background: rgba(50, 255, 255, 0.2);
+        text-align: center;
+        padding-top: 40px;
+        border-radius: 10px;
+        /* Box shadow */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    
+}
+#clock_label {
+    padding: 30px 30px;
+    color: rgb(255, 255, 255); /* Snow White */
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
+    text-shadow: 
+    0 0 5px rgba(0, 255, 255, 0.8),
+    0 0 10px rgba(0, 255, 255, 0.6),
+    0 0 20px rgba(0, 255, 255, 0.4);
+    display: flexbox;
+}
+.city_input {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #00ffff;
+    color: #00ffff;   
+    padding: 10px;
+    border-radius: 8px;
+    height: 10px;
+    text-align: center;
+
+  /* Font stack */
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+    font-size: 16px;
+    
+}
+.city_label {
+    padding: 60px 10px;
+    font-family: Impact, Arial Black, sans-serif; /* falls back to system fonts */
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+
+  /* Neon Glow */
+    text-shadow:
+    0 0 5px rgba(0, 255, 255, 0.9),
+    0 0 15px rgba(0, 255, 255, 0.7),
+    0 0 30px rgba(0, 150, 255, 0.6),
+    0 0 60px rgba(0, 150, 255, 0.5);
+}
+.city_name {
+    display: flex-box;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 5px;
+}
+
+.region_input {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #00ffff;
+    color: #00ffff;   
+    padding: 10px;
+    border-radius: 8px;
+    height: 10px;
+    text-align: center;
+
+  /* Font stack */
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+    font-size: 16px;
+    
+}
+.region_label {
+    padding: 2px 20px;
+    font-family: Impact, Arial Black, sans-serif; /* falls back to system fonts */
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+
+  /* Neon Glow */
+    text-shadow:
+    0 0 5px rgba(0, 255, 255, 0.9),
+    0 0 15px rgba(0, 255, 255, 0.7),
+    0 0 30px rgba(0, 150, 255, 0.6),
+    0 0 60px rgba(0, 150, 255, 0.5);
+}
+.region_name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px;
+}
+.city_input::placeholder,
+.region_input::placeholder {
+    color: #00ffff;              /* neon cyan */
+    opacity: 0.8;                /* slightly transparent */
+    font-style: italic;          /* optional */
+}
+
+/* Spinner for input */
+.loading {
+  background: url("https://i.gifer.com/ZZ5H.gif") no-repeat right 10px center;
+  background-size: 20px;
+}
+
+
+.button_div{
+    padding: 40px 40px;
+}
+.button_clock {
+    width: 80px;
+    height : 40px;
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+    color: rgb(255,255,255,0.8);
+    font-size: 15px;
+    background: rgb(0,0,0,0.7);
+    border: none;
+    border-radius: 20px;
+    text-shadow:
+    0 0 5px rgba(0, 255, 255, 0.9),
+    0 0 15px rgba(0, 255, 255, 0.7),
+    0 0 30px rgba(0, 150, 255, 0.6),
+    0 0 60px rgba(0, 150, 255, 0.5);
+}
+.button_clock:hover {
+    background-color: rgb(0,0,0,0.5);
+}
+.button_clock:active {
+    background-color: rgb(0,0,0,0.3);
+}
+
+.result {
+    padding: 30px 30px;
+}
+.result_text {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #00ffff;
+    color: #00ffff;   
+    padding: 10px;
+    border-radius: 8px;
+    width : 400px;
+    height: 10px;
+    text-align: center;
+
+  /* Font stack */
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
