@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel='stylesheet' href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'post_list' %}">MiniReddit</a></h1>
+        {% if user.is_authenticated %}
+        <p>Welcome, {{ user.username }} | <a href="{% url 'logout' %}">Logout</a></p>
+        {% else %}
+        <a href="{% url 'login' %}">Login</a> | <a href="{% url 'signup' %}">Sign Up</a>
+        {% endif %}
+    </header>
+    <main>
+    {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
