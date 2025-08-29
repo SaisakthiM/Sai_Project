@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}My Blog{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-gray-100">
+  <nav class="bg-slate-800 shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-3 md:px-8 flex justify-between items-center">
+      <a href="{% url 'home' %}" class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-sky-400 via-pink-400 to-violet-400 bg-clip-text text-transparent">
+        My Blog
+      </a>
+      <div class="space-x-4">
+        {% if user.is_authenticated %}
+          <a href="{% url 'profile' %}" class="hover:text-cyan-400 transition-colors">Profile</a>
+          <a href="{% url 'create_post' %}" class="hover:text-green-400 transition-colors font-semibold">New Post</a>
+          <form method="post" action="{% url 'logout' %}" class="inline">
+            {% csrf_token %}
+            <button type="submit" class="text-gray-400 hover:text-cyan-400 transition-colors bg-transparent border-0 focus:outline-none">
+              Logout
+            </button>
+          </form>
+        {% else %}
+          <a href="{% url 'login' %}" class="hover:text-cyan-400 transition-colors">Login</a>
+          <a href="{% url 'register' %}" class="hover:text-cyan-400 transition-colors">Register</a>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-8">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="bg-slate-800 border-t border-slate-700 text-center py-4 mt-10 text-sm text-gray-400">
+    &copy; {{ year }} My Blog. All rights reserved.
+  </footer>
+</body>
+</html>

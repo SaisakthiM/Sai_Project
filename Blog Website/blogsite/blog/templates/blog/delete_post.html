@@ -1,0 +1,13 @@
+{% extends "blog/layout.html" %}
+{% block content %}
+<div class="max-w-xl mx-auto bg-slate-800 p-6 rounded-xl shadow-xl text-white">
+  <h1 class="text-2xl font-bold text-red-400 mb-4">Delete Post</h1>
+  <p>Are you sure you want to delete the post: <span class="text-yellow-400 font-semibold">{{ post.title }}</span>?</p>
+
+  <form method="post" class="mt-6">
+    {% csrf_token %}
+    <button type="submit" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded text-white mr-4">Yes, Delete</button>
+    <a href="{% url 'post_detail' post.pk %}" class="text-blue-400 hover:underline">Cancel</a>
+  </form>
+</div>
+{% endblock %}

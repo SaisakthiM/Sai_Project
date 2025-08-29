@@ -1,0 +1,37 @@
+{% extends "blog/layout.html" %}
+{% block content %}
+{% load static%}
+<div class="max-w-md mx-auto mt-8 bg-slate-800 border border-slate-700 p-6 rounded-lg shadow-lg text-white">
+    <h1 class="text-3xl font-bold mb-6 text-pink-400">Edit Profile</h1>
+    <form method="post" enctype="multipart/form-data" class="space-y-4">
+        {% csrf_token %}
+        
+        {% for field in form %}
+            <div>
+                {{ field.label_tag }}
+                {{ field }}
+                {% if field.help_text %}
+                    <p class="text-sm text-gray-400">{{ field.help_text }}</p>
+                {% endif %}
+                {% for error in field.errors %}
+                    <p class="text-red-500 text-sm">{{ error }}</p>
+                {% endfor %}
+            </div>
+        {% endfor %}
+
+        <h2 class="text-lg font-semibold mt-6 text-pink-400">Choose Your Avatar</h2>
+        <div class="grid grid-cols-3 gap-4 mt-4">
+            {% for avatar in avatars %}
+            <label class="cursor-pointer">
+                <input type="radio" name="avatar" value="{{ avatar }}" class="hidden" {% if user.profile.avatar == avatar %}checked{% endif %}>
+                <img src="{% static 'avatars/'|add:avatar %}" class="rounded-full border-4 border-transparent hover:border-cyan-400 w-20 h-20 object-cover transition">
+            </label>
+            {% endfor %}
+        </div>
+    
+        <button class="w-full bg-gradient-to-r from-blue-400 to-purple-500 hover:from-cyan-400 hover:to-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400 text-white px-4 py-2 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+            Update Profile
+        </button>
+    </form>
+</div>
+{% endblock %}

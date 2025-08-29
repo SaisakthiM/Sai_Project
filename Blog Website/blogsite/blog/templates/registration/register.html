@@ -1,0 +1,22 @@
+{% extends "blog/layout.html" %}
+{% block content %}
+<div class="max-w-md mx-auto mt-8 bg-gray-800 p-6 shadow-lg rounded-lg">
+    <h1 class="text-3xl font-bold mb-6 text-cyan-400">Register</h1>
+    <form method="post" class="space-y-5">
+        {% csrf_token %}
+        {% for field in form %}
+            <div>
+                {{ field.label_tag }}
+                {{ field }}
+                {% for error in field.errors %}
+                    <p class="text-red-600">{{ error }}</p>
+                {% endfor %}
+            </div>
+        {% endfor %}
+        <button class="w-full bg-blue-600 hover:bg-blue-700 focus:outline-none
+                      focus:ring-2 focus:ring-blue-400 text-white px-4 py-2 rounded">
+            Sign Up
+        </button>
+    </form>
+</div>
+{% endblock %}

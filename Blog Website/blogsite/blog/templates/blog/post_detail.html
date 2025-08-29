@@ -1,0 +1,36 @@
+{% extends "blog/layout.html" %}
+{% block content %}
+<div class="max-w-3xl mx-auto mt-8 bg-slate-800 border border-slate-700 p-6 rounded-lg shadow-lg text-white">
+    <h1 class="text-3xl font-bold mb-2 text-cyan-400">{{ post.title }}</h1>
+    <p class="text-sm text-gray-400 mb-4">by {{ post.author }} on {{ post.created_at }}</p>
+    <p class="mb-8 leading-relaxed text-gray-200">{{ post.content }}</p>
+
+    <h2 class="text-xl font-semibold mb-4 text-violet-400">Comments</h2>
+    <div class="space-y-4 mb-6">
+        {% for comment in comments %}
+            <div class="border-b border-slate-700 py-2">
+                <p><strong>{{ comment.author }}</strong>: {{ comment.content }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% if user.is_authenticated %}
+        {% if request.user == post.author %}
+        <a href="{% url 'delete_post' post.pk %}" class="inline-block bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded mt-4">
+            Delete Post
+        </a>
+        {% endif %}
+    <form method="post" class="mt-6 space-y-4">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="w-full bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 focus:outline-none focus:ring-2 focus:ring-cyan-300 text-white px-4 py-2 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+            Post Comment
+        </button>
+    </form>
+    {% else %}
+    <p class="mt-6">
+        Please <a href="{% url 'login' %}" class="text-cyan-400 hover:text-cyan-300 underline">login</a> to comment.
+    </p>
+    {% endif %}
+</div>
+{% endblock %}
