@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="clock">
+        <label id="clock_label">Universal Clock <br></label>
+        <div class="city_name">
+            <label class="city_label">Enter City : </label> <input type="text" pattern="[A-Za-z\s]+" title="Only letters allowed" placeholder="Enter a City" class="city_input" >
+        </div>
+        <div class="region_name">
+            <label class="region_label">Enter Region :</label> <input type="text" pattern="[A-Za-z\s]+" title="Only letters allowed" placeholder="Enter a Region" class="region_input">
+        </div>
+        <div class="button_div">
+            <button type="submit" class="button_clock">Submit</button>
+        </div>
+        <div class="result">
+            <input type="text" class="result_text" readonly>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
