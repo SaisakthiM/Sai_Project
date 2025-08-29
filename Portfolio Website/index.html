@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinz | Frontend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-very-dark font-sans text-light-text overflow-x-hidden">
+
+    <div id="cursor-dot"></div>
+    <div id="cursor-outline"></div>
+
+    <div id="loader-overlay">
+        <div id="loader-left">
+            <span id="loader-counter">0%</span>
+        </div>
+        <div id="loader-right"></div>
+    </div>
+
+    <canvas id="bg-starfield"></canvas>
+
+    <main id="main-content">
+
+        <header id="navbar">
+            <nav>
+                <a href="#hero" class="site-logo">Vinz.</a>
+                <div class="nav-links">
+                    <a href="#hero" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#education" class="nav-link">Education</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="mailto:hello@vinz.com" class="cta-btn">Let's Talk</a>
+                </div>
+                <button id="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </nav>
+        </header>
+
+        <div id="mobile-menu">
+            <a href="#hero" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        
+        <section id="hero">
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-text gradient-text">
+                    Hi, I'm Saisakthi
+                </h1>
+                <p class="hero-text hero-subtitle">
+                    Frontend Developer Ready to Build Your Next Product.
+                </p>
+                <p class="hero-text hero-description">
+                    A recent graduate specializing in modern web technologies. I bring a solid foundation in HTML, CSS, JavaScript, and React, coupled with a passion for creating seamless and visually appealing user experiences.
+                </p>
+                <a href="#contact" class="hero-text cta-btn">
+                    Let's Connect
+                </a>
+            </div>
+            <div class="floating-icon icon-html"><i class="fab fa-html5"></i></div>
+            <div class="floating-icon icon-css"><i class="fab fa-css3-alt"></i></div>
+            <div class="floating-icon icon-js"><i class="fab fa-js"></i></div>
+            <div class="floating-icon icon-react"><i class="fab fa-react"></i></div>
+            <div class="floating-icon icon-code"><i class="fa-solid fa-code"></i></div>
+        </section>
+
+
+        <section class="marquee-section">
+            <div id="marquee-container">
+                <div id="marquee-track-1" class="marquee-track">
+                    <span>Three.js - React - GSAP - Tailwind CSS - Next.js - Framer Motion - WebGL</span>
+                </div>
+                <div id="marquee-track-2" class="marquee-track">
+                    <span>Three.js - React - GSAP - Tailwind CSS - Next.js - Framer Motion - WebGL</span>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="about" class="section">
+            <div class="container about-grid">
+                <div class="about-image-reveal about-image-container">
+                    <div class="glass glass-about">
+                        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Programmer working">
+                    </div>
+                </div>
+                <div class="about-text-reveal about-text-content">
+                    <h2 class="section-title">Passionate Frontend Developer</h2>
+                    <p class="section-description">
+                        I am a fervent advocate for creating fast, responsive, and visually stunning web applications. My journey into frontend development began with a fascination for the intersection of design and code. I believe that a great user experience is a perfect blend of aesthetic appeal and technical efficiency.
+                    </p>
+                    <p class="section-description">
+                        With a solid foundation in HTML, CSS, and JavaScript, I am constantly exploring new frameworks and tools to push the boundaries of what is possible on the web. My focus is on writing clean, maintainable code while staying up-to-date with the latest industry trends and best practices. I'm always ready for the next challenge!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="portfolio" class="section section-dark">
+            <div class="container text-center">
+                <p class="subtitle">Projects</p>
+                <h2 class="section-title">Practice makes perfect.</h2>
+                <p class="section-description">
+                    I believe in focusing on quality over quantity. Each project is a testament to my dedication to learning and my passion for creating exceptional web experiences.
+                </p>
+                <div class="circular-portfolio">
+                    <div class="circular-content">
+                        <span class="circular-number">1+</span>
+                        <span class="circular-text">Years of Experience</span>
+                    </div>
+                    <div id="circle-text-container" class="circular-text-container">
+                        <p id="circle-text" class="text-stroke">Portfolio - Portfolio - Portfolio - Portfolio -</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">Experience</h2>
+                    <p class="section-description">A glimpse into my professional journey, where I've honed my skills and contributed to impactful projects.</p>
+                </div>
+                <div class="timeline-wrapper">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-item timeline-left">
+                        <div class="glass timeline-content">
+                            <h3>Lead Frontend Developer</h3>
+                            <p class="timeline-company">Stellar Solutions Inc. (2022-Present)</p>
+                            <ul>
+                                <li>Developed interactive 3D product visualizers with Three.js and React.</li>
+                                <li>Improved user engagement by 40% through optimized UI/UX.</li>
+                                <li>Maintained and extended a component library using Tailwind CSS.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-right">
+                        <div class="glass timeline-content">
+                            <h3>Senior Frontend Developer</h3>
+                            <p class="timeline-company">Quantum Dynamics (2020-2022)</p>
+                            <ul>
+                                <li>Specialized in data visualizations using D3.js.</li>
+                                <li>Created intricate UI animations with GSAP to enhance user experience.</li>
+                                <li>Collaborated with backend teams to integrate RESTful APIs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-left">
+                        <div class="glass timeline-content">
+                            <h3>Frontend Developer</h3>
+                            <p class="timeline-company">Innovatech (2018-2020)</p>
+                            <ul>
+                                <li>Built responsive user interfaces with modern JS frameworks.</li>
+                                <li>Utilized CSS preprocessors like SASS and LESS for modular styling.</li>
+                                <li>Participated in agile development cycles.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="projects" class="section-full-width">
+            <div class="container text-center mb-16">
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            <div id="projects-container" class="projects-horizontal-scroll">
+                <div class="project-card-wrapper">
+                    <div class="glass project-card">
+                        <i class="fa-solid fa-cube project-icon-cyan"></i>
+                        <h3>3D Configurator</h3>
+                        <p>Interactive product customization powered by Three.js and React.</p>
+                    </div>
+                </div>
+                <div class="project-card-wrapper">
+                    <div class="glass project-card">
+                        <i class="fa-solid fa-chart-line project-icon-blue"></i>
+                        <h3>Data Viz Platform</h3>
+                        <p>Dynamic dashboards with compelling data visualizations using D3.js.</p>
+                    </div>
+                </div>
+                <div class="project-card-wrapper">
+                    <div class="glass project-card">
+                        <i class="fa-solid fa-cart-shopping project-icon-green"></i>
+                        <h3>E-commerce Site</h3>
+                        <p>Full-featured online store built with Next.js for performance and SEO.</p>
+                    </div>
+                </div>
+                <div class="project-card-wrapper">
+                    <div class="glass project-card">
+                        <i class="fa-solid fa-gamepad project-icon-purple"></i>
+                        <h3>WebGL Game</h3>
+                        <p>An engaging browser-based game using pure WebGL for high-performance graphics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="education" class="section">
+            <div class="container text-center">
+                <h2 class="section-title">Education</h2>
+                <div class="education-grid">
+                    <div class="education-card glass">
+                        <i class="fa-solid fa-graduation-cap icon-indigo"></i>
+                        <div>
+                            <h3>B.Sc. in Computer Science</h3>
+                            <p>University of Technology (2014-2018)</p>
+                        </div>
+                    </div>
+                    <div class="education-card glass">
+                        <i class="fa-solid fa-award icon-cyan"></i>
+                        <div>
+                            <h3>Advanced Three.js & WebGL Certification</h3>
+                            <p>Online Graphics Academy (Ongoing)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="contact" class="section text-center">
+            <div class="container">
+                <h2 class="section-title">Let's Build the Future</h2>
+                <p class="section-description">
+                    Whether you have a groundbreaking project in mind, a job opportunity, or just want to connect, feel free to reach out. I'm always open to new ideas and collaborations.
+                </p>
+                <a href="mailto:hello@vinz.com" class="contact-email gradient-text">
+                    hello@vinz.com
+                </a>
+            </div>
+        </section>
+
+        ---
+
+        ## Footer
+
+        <footer class="site-footer">
+            <p>&copy; 2025 CodeWithVinz. All rights reserved.</p>
+            <p>Designed & Built with futuristic vibes.</p>
+        </footer>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <script src="main.js"></script>
+
+</body>
+</html>
